@@ -1,0 +1,43 @@
+# Environment variables
+.env
+.env.*
+*.env
+.env.local
+.env.production
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+target/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Secrets
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+!.env.example
