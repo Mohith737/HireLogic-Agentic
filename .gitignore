@@ -1,4 +1,4 @@
-# Environment variables
+# Environment variables - NEVER commit these
 .env
 .env.*
 *.env
@@ -9,7 +9,6 @@
 node_modules/
 __pycache__/
 *.pyc
-*.pyo
 venv/
 .venv/
 
@@ -31,13 +30,13 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
-*.suo
-*.user
 
 # Secrets
 *.pem
 *.key
 *.p12
 *.pfx
-secrets/
+
+# Allow .env.example to be committed
 !.env.example
+

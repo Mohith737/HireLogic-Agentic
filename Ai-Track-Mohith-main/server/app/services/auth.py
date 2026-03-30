@@ -23,5 +23,7 @@ async def login(db: AsyncSession, username: str, password: str) -> tuple[str | N
         "sub": str(user.id),
         "exp": datetime.now(UTC) + timedelta(days=7),
     }
-    token = jwt.encode(payload, settings.secret_key, algorithm="HS256")
+    token=see .env file
     return token, user
+
+

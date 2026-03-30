@@ -77,7 +77,7 @@ async def seed_user(db: AsyncSession) -> User:
         username="testuser",
         email="test@example.com",
         full_name="Test User",
-        password_hash=hash_password("testpass"),
+        password_hash=see .env file
     )
     db.add(user)
     await db.commit()
@@ -96,5 +96,7 @@ def make_token(user_id: int) -> str:
 
 @pytest.fixture
 def auth_headers(seed_user: User) -> dict[str, str]:
-    token = make_token(seed_user.id)
+    token=see .env file
     return {"Authorization": f"Bearer {token}"}
+
+

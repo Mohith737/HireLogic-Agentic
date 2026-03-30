@@ -48,7 +48,7 @@ except ImportError:  # pragma: no cover
 
 MODEL = "gemini-2.5-flash"
 BACKEND_BASE_URL = os.getenv("BACKEND_BASE_URL", "http://127.0.0.1:8000")
-AGENT_INTERNAL_SECRET = os.getenv("AGENT_INTERNAL_SECRET", "dev-agent-secret")
+AGENT_INTERNAL_SECRET=see .env file
 DOCUMENTS_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "documents")
 
 
@@ -389,3 +389,5 @@ __all__ = [
     "agent",
     "SequentialAgent",
 ]
+
+

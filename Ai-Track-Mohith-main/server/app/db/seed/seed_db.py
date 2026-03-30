@@ -29,13 +29,13 @@ async def seed() -> None:
             username="recruiter_alice",
             email="alice@hirelogic.com",
             full_name="Recruiter Alice",
-            hashed_password=hash_password("pass1234"),
+            hashed_password=see .env file
         )
         recruiter_bob = User(
             username="recruiter_bob",
             email="bob@hirelogic.com",
             full_name="Recruiter Bob",
-            hashed_password=hash_password("pass1234"),
+            hashed_password=see .env file
         )
         session.add_all([recruiter_alice, recruiter_bob])
         await session.flush()
@@ -275,3 +275,5 @@ async def seed() -> None:
 
 if __name__ == "__main__":
     asyncio.run(seed())
+
+

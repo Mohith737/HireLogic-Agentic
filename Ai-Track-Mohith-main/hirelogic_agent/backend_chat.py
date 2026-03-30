@@ -24,7 +24,7 @@ from server.app.services.validation import compress_evidence, validate_resume_an
 
 APP_NAME = "hirelogic"
 BACKEND_BASE_URL = os.getenv("BACKEND_BASE_URL", "http://127.0.0.1:8000")
-AGENT_INTERNAL_SECRET = os.getenv("AGENT_INTERNAL_SECRET", "dev-agent-secret")
+AGENT_INTERNAL_SECRET=see .env file
 DOCUMENTS_PATH = os.path.join(os.path.dirname(__file__), "..", "documents")
 FOLLOWUP_CACHE: dict[str, dict[str, object]] = {}
 
@@ -397,3 +397,5 @@ async def run_hirelogic(
         "bias_flags": result.get("bias_flags", []),
         "fallback_triggered": False,
     }
+
+
