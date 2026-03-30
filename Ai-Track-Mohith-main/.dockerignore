@@ -1,0 +1,12 @@
+**/node_modules
+**/.venv
+**/.venv_adk
+**/__pycache__
+**/*.pyc
+**/.env
+**/evals/runs/*.log
+**/evals/runs/*_summary.json
+**/.git
+**/dist
+client/.env*
+hirelogic_agent/.adk/

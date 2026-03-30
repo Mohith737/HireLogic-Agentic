@@ -1,0 +1,1 @@
+"""HireLogic ADK evaluation suite."""

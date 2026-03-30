@@ -1,0 +1,99 @@
+{
+  "eval_set_id": "hirelogic-ranking-v1",
+  "name": "HireLogic Ranking Pipeline — Core Case",
+  "description": "Single golden case calibrated from real ADK trace. Input: rank candidates for Senior ML Engineer. Expected: response contains candidate-uuid-001 as top ranked. Tool sequence: fetch_job_context -> fetch_candidates_for_job -> fetch_resume_analysis x3 -> fetch_candidate_scores x3 -> fetch_bias_detection -> finalize_response (10 calls total).",
+  "eval_cases": [
+    {
+      "eval_id": "rank-senior-ml-core",
+      "conversation": [
+        {
+          "invocation_id": "inv-rank-core-001",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Rank all candidates for the Senior ML Engineer role"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "candidate-uuid-003"
+              }
+            ],
+            "role": "model"
+          },
+          "expected_tool_use": [
+            {
+              "tool_name": "fetch_job_context",
+              "tool_input": {
+                "job_id": "1"
+              }
+            },
+            {
+              "tool_name": "fetch_candidates_for_job",
+              "tool_input": {
+                "job_id": "1"
+              }
+            },
+            {
+              "tool_name": "fetch_resume_analysis",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-001"
+              }
+            },
+            {
+              "tool_name": "fetch_resume_analysis",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-002"
+              }
+            },
+            {
+              "tool_name": "fetch_resume_analysis",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-003"
+              }
+            },
+            {
+              "tool_name": "fetch_candidate_scores",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-001"
+              }
+            },
+            {
+              "tool_name": "fetch_candidate_scores",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-002"
+              }
+            },
+            {
+              "tool_name": "fetch_candidate_scores",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-003"
+              }
+            },
+            {
+              "tool_name": "fetch_bias_detection",
+              "tool_input": {
+                "job_id": "1"
+              }
+            },
+            {
+              "tool_name": "finalize_response",
+              "tool_input": {
+                "job_id": "1"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

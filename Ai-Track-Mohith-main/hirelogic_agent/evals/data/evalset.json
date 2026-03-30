@@ -1,0 +1,157 @@
+{
+  "eval_set_id": "hirelogic_golden_v1",
+  "eval_cases": [
+    {
+      "eval_id": "case_01_full_ranking",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Rank all candidates for the Senior ML Engineer role"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: JSON response with scorecard containing 3 candidates, ranking list, bias_flags array, and natural language reply"
+        }
+      ],
+      "expected_tool_calls": [
+        "get_resource_overview",
+        "fetch_job_context",
+        "fetch_candidate_profiles",
+        "fetch_resume_analysis",
+        "fetch_candidate_scores",
+        "fetch_bias_detection",
+        "finalize_response"
+      ],
+      "reference_final_response": "Candidates ranked for Senior ML Engineer role. Top candidate demonstrates strong production ML experience. No bias patterns detected."
+    },
+    {
+      "eval_id": "case_02_follow_up_comparison",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Why is the top ranked candidate higher than candidate 2?"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: Natural language comparison using cached scorecard. No new tool calls to scoring or bias routes."
+        }
+      ],
+      "expected_tool_calls": [],
+      "reference_final_response": "The top candidate scores higher due to stronger production Python experience and system design evidence."
+    },
+    {
+      "eval_id": "case_03_weight_adjustment",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Re-rank candidates but increase Python weight to 40%"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: Full pipeline re-run with Python weight at 0.40. Other weights re-normalized. New ranking returned."
+        }
+      ],
+      "expected_tool_calls": [
+        "get_resource_overview",
+        "fetch_job_context",
+        "fetch_candidate_profiles",
+        "fetch_resume_analysis",
+        "fetch_candidate_scores",
+        "fetch_bias_detection",
+        "finalize_response"
+      ],
+      "reference_final_response": "Re-ranked with Python at 40% weight. Ranking may have shifted based on Python evidence strength."
+    },
+    {
+      "eval_id": "case_04_ambiguous_query",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Rank the candidates"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: Clarifying question asking which role or job to rank for."
+        }
+      ],
+      "expected_tool_calls": [],
+      "reference_final_response": "Could you specify which role you'd like to rank candidates for?"
+    },
+    {
+      "eval_id": "case_05_bias_check",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Are there any bias patterns in the scoring for Senior ML Engineer?"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: Response referencing bias_flags. Either confirms no bias or explains flags found."
+        }
+      ],
+      "expected_tool_calls": [
+        "get_resource_overview",
+        "fetch_job_context",
+        "fetch_candidate_profiles",
+        "fetch_resume_analysis",
+        "fetch_candidate_scores",
+        "fetch_bias_detection",
+        "finalize_response"
+      ],
+      "reference_final_response": "Bias analysis complete. Scoring was based on demonstrated skills and production impact only."
+    },
+    {
+      "eval_id": "case_06_interview_feedback_blend",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Score candidate-uuid-003 for Senior ML Engineer including their interview feedback"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: Scorecard for candidate-uuid-003 with interview_feedback_used: true on at least some competencies. Blend ratio applied."
+        }
+      ],
+      "expected_tool_calls": [
+        "get_resource_overview",
+        "fetch_job_context",
+        "fetch_candidate_profiles",
+        "fetch_resume_analysis",
+        "fetch_candidate_scores",
+        "fetch_bias_detection",
+        "finalize_response"
+      ],
+      "reference_final_response": "Candidate scored with interview feedback blended at 40% weight. System Design scored highest based on combined evidence."
+    },
+    {
+      "eval_id": "case_07_out_of_scope",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "What is the weather in Bengaluru today?"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: Polite decline. No tool calls. Redirects to recruitment use case."
+        }
+      ],
+      "expected_tool_calls": [],
+      "reference_final_response": "I can help with candidate screening and ranking for open roles."
+    },
+    {
+      "eval_id": "case_08_competency_explanation",
+      "conversation": [
+        {
+          "role": "user",
+          "content": "Explain the Machine Learning score for the top candidate"
+        },
+        {
+          "role": "model",
+          "content": "EXPECTED: Explanation referencing specific evidence from resume. Score justified with verbatim quote. No re-scoring."
+        }
+      ],
+      "expected_tool_calls": [],
+      "reference_final_response": "The top candidate scored highly on Machine Learning based on evidence of production model deployment and measurable latency improvements."
+    }
+  ]
+}

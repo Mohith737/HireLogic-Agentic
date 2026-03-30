@@ -1,0 +1,13 @@
+{
+  "document_id": "historical_hiring_outcomes",
+  "title": "Historical Hiring Outcomes",
+  "document_type": "historical_outcomes",
+  "sections": [
+    {
+      "section_id": "section_01_performance",
+      "title": "Performance Outcomes",
+      "file": "section_01_performance.md",
+      "pdf_file": "section_01_performance.pdf"
+    }
+  ]
+}

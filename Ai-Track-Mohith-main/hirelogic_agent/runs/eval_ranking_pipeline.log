@@ -1,0 +1,65 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server
+plugins: anyio-4.12.1, asyncio-1.3.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+evals/agent_eval.py::test_ranking_pipeline PASSED
+
+=============================== warnings summary ===============================
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/agent_evaluator.py:153: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    user_simulator_provider = UserSimulatorProvider(
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/metric_evaluator_registry.py:106: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    metric_evaluator_registry = MetricEvaluatorRegistry()
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/local_eval_service.py:124: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    user_simulator_provider: UserSimulatorProvider = UserSimulatorProvider(),
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/agent_evaluator.py:557: UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    eval_service = LocalEvalService(
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/simulation/user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    return StaticUserSimulator(static_conversation=eval_case.conversation)
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/simulation/static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    super().__init__(
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/runners.py:239: DeprecationWarning: The `plugins` argument is deprecated. Please use the `app` argument to provide plugins instead.
+    warnings.warn(
+
+evals/agent_eval.py: 13 warnings
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/genai/_api_client.py:770: DeprecationWarning: Inheritance class AiohttpClientSession from ClientSession is discouraged
+    class AiohttpClientSession(aiohttp.ClientSession):  # type: ignore[misc]
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/metric_evaluator_registry.py:72: UserWarning: [EXPERIMENTAL] RubricBasedToolUseV1Evaluator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    return evaluator_type(eval_metric=eval_metric)
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/rubric_based_tool_use_quality_v1.py:160: UserWarning: [EXPERIMENTAL] RubricBasedEvaluator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    super().__init__(
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/rubric_based_evaluator.py:322: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    super().__init__(
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/metric_evaluator_registry.py:72: UserWarning: [EXPERIMENTAL] FinalResponseMatchV2Evaluator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    return evaluator_type(eval_metric=eval_metric)
+
+evals/agent_eval.py::test_ranking_pipeline
+  /home/mohith/Downloads/ai-track/Ai-Track-Mohith/agents_server/.venv_adk/lib/python3.12/site-packages/google/adk/evaluation/final_response_match_v2.py:146: UserWarning: [EXPERIMENTAL] LlmAsJudge: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+    super().__init__(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================== 1 passed, 25 warnings in 90.01s (0:01:30) ===================

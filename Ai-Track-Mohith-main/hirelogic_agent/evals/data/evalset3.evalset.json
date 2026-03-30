@@ -1,0 +1,57 @@
+{
+  "eval_set_id": "hirelogic-followup-v1",
+  "name": "HireLogic Follow-up and Routing",
+  "description": "Tests conversation routing. Follow-up questions return plain text explanations without re-running the full pipeline. Out-of-scope queries are redirected to recruitment topics. Expected tool use is empty [] because conversation_agent handles these directly.",
+  "eval_cases": [
+    {
+      "eval_id": "followup-why-ranked",
+      "conversation": [
+        {
+          "invocation_id": "inv-fu-001",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Why did the top candidate rank first?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "candidate"
+              }
+            ],
+            "role": "model"
+          },
+          "expected_tool_use": []
+        }
+      ]
+    },
+    {
+      "eval_id": "followup-outofscope",
+      "conversation": [
+        {
+          "invocation_id": "inv-fu-002",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the weather today?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "No candidates were scored."
+              }
+            ],
+            "role": "model"
+          },
+          "expected_tool_use": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "eval_set_id": "hirelogic-bias-v1",
+  "name": "HireLogic Bias Detection",
+  "description": "Golden cases for bias detection. Bias queries trigger the full 5-agent pipeline because the agent must score candidates before detecting bias patterns. Expected: response contains 'bias' keyword indicating the bias detection step ran.",
+  "eval_cases": [
+    {
+      "eval_id": "bias-full-pipeline-001",
+      "conversation": [
+        {
+          "invocation_id": "inv-bias-001",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Rank candidates for Senior ML Engineer and check for any bias in the scoring"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "bias"
+              }
+            ],
+            "role": "model"
+          },
+          "expected_tool_use": [
+            {
+              "tool_name": "fetch_job_context",
+              "tool_input": {
+                "job_id": "1"
+              }
+            },
+            {
+              "tool_name": "fetch_candidates_for_job",
+              "tool_input": {
+                "job_id": "1"
+              }
+            },
+            {
+              "tool_name": "fetch_resume_analysis",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-001"
+              }
+            },
+            {
+              "tool_name": "fetch_resume_analysis",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-002"
+              }
+            },
+            {
+              "tool_name": "fetch_resume_analysis",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-003"
+              }
+            },
+            {
+              "tool_name": "fetch_candidate_scores",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-001"
+              }
+            },
+            {
+              "tool_name": "fetch_candidate_scores",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-002"
+              }
+            },
+            {
+              "tool_name": "fetch_candidate_scores",
+              "tool_input": {
+                "job_id": "1",
+                "candidate_anon_id": "candidate-uuid-003"
+              }
+            },
+            {
+              "tool_name": "fetch_bias_detection",
+              "tool_input": {
+                "job_id": "1"
+              }
+            },
+            {
+              "tool_name": "finalize_response",
+              "tool_input": {
+                "job_id": "1"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "index_version": "1.0",
+  "last_updated": "2026-03-10T00:00:00Z",
+  "total_documents": 6,
+  "categories": {
+    "job_descriptions": [
+      {
+        "document_id": "job_senior_ml_engineer",
+        "title": "Senior ML Engineer",
+        "path": "documents/job_senior_ml_engineer/",
+        "index_file": "documents/job_senior_ml_engineer/index.json",
+        "keywords": [
+          "ml",
+          "python",
+          "senior",
+          "machine learning",
+          "pytorch",
+          "system design"
+        ]
+      },
+      {
+        "document_id": "job_backend_engineer",
+        "title": "Backend Software Engineer",
+        "path": "documents/job_backend_engineer/",
+        "index_file": "documents/job_backend_engineer/index.json",
+        "keywords": [
+          "backend",
+          "python",
+          "go",
+          "databases",
+          "system design",
+          "api"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "document_id": "candidate_uuid_001",
+        "anon_id": "candidate-uuid-001",
+        "path": "documents/candidate_uuid_001/",
+        "index_file": "documents/candidate_uuid_001/index.json",
+        "keywords": [
+          "ml",
+          "python",
+          "pytorch",
+          "production",
+          "6 years",
+          "recommendation system"
+        ]
+      },
+      {
+        "document_id": "candidate_uuid_002",
+        "anon_id": "candidate-uuid-002",
+        "path": "documents/candidate_uuid_002/",
+        "index_file": "documents/candidate_uuid_002/index.json",
+        "keywords": [
+          "research",
+          "ml",
+          "papers",
+          "4 years",
+          "theory",
+          "nlp"
+        ]
+      },
+      {
+        "document_id": "candidate_uuid_003",
+        "anon_id": "candidate-uuid-003",
+        "path": "documents/candidate_uuid_003/",
+        "index_file": "documents/candidate_uuid_003/index.json",
+        "keywords": [
+          "system design",
+          "production",
+          "8 years",
+          "architecture",
+          "10M users"
+        ]
+      }
+    ],
+    "historical_outcomes": [
+      {
+        "document_id": "historical_hiring_outcomes",
+        "path": "documents/historical_hiring_outcomes/",
+        "index_file": "documents/historical_hiring_outcomes/index.json",
+        "keywords": [
+          "performance",
+          "retention",
+          "hiring",
+          "calibration",
+          "outcomes"
+        ]
+      }
+    ]
+  }
+}

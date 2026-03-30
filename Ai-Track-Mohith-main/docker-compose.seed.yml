@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  seed:
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+asyncpg://hirelogic:hirelogic@db:5432/hirelogic
+      SECRET_KEY: dev-secret-key-change-in-prod
+      AGENT_INTERNAL_SECRET: dev-agent-secret
+      ENV: development
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["python", "-m", "app.db.seed.seed_db"]
+    networks:
+      - default
+
+networks:
+  default:
+    name: ai-track-mohith_default
+    external: true

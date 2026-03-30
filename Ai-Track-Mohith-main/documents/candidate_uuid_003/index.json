@@ -1,0 +1,25 @@
+{
+  "document_id": "candidate_uuid_003",
+  "anon_id": "candidate-uuid-003",
+  "document_type": "candidate_profile",
+  "sections": [
+    {
+      "section_id": "section_01_experience",
+      "title": "Experience",
+      "file": "section_01_experience.md",
+      "pdf_file": "section_01_experience.pdf"
+    },
+    {
+      "section_id": "section_02_skills_projects",
+      "title": "Skills and Projects",
+      "file": "section_02_skills_projects.md",
+      "pdf_file": "section_02_skills_projects.pdf"
+    },
+    {
+      "section_id": "section_03_education_certs",
+      "title": "Education and Certifications",
+      "file": "section_03_education_certs.md",
+      "pdf_file": "section_03_education_certs.pdf"
+    }
+  ]
+}

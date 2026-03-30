@@ -1,0 +1,25 @@
+{
+  "document_id": "job_backend_engineer",
+  "title": "Backend Software Engineer",
+  "document_type": "job_description",
+  "sections": [
+    {
+      "section_id": "section_01_overview",
+      "title": "Role Overview",
+      "file": "section_01_overview.md",
+      "pdf_file": "section_01_overview.pdf"
+    },
+    {
+      "section_id": "section_02_competency_framework",
+      "title": "Competency Framework",
+      "file": "section_02_competency_framework.md",
+      "pdf_file": "section_02_competency_framework.pdf"
+    },
+    {
+      "section_id": "section_03_requirements",
+      "title": "Requirements",
+      "file": "section_03_requirements.md",
+      "pdf_file": "section_03_requirements.pdf"
+    }
+  ]
+}

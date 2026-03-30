@@ -1,0 +1,66 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: hirelogic_db
+    environment:
+      POSTGRES_USER: hirelogic
+      POSTGRES_PASSWORD: hirelogic
+      POSTGRES_DB: hirelogic
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hirelogic"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  server:
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile
+    container_name: hirelogic_server
+    environment:
+      DATABASE_URL: postgresql+asyncpg://hirelogic:hirelogic@db:5432/hirelogic
+      SECRET_KEY: dev-secret-key-change-in-prod
+      AGENT_INTERNAL_SECRET: dev-agent-secret
+      ENV: development
+      GOOGLE_API_KEY: ${GEMINI_API_KEY:-}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  agents:
+    build:
+      context: .
+      dockerfile: docker/agents/Dockerfile
+    container_name: hirelogic_agents
+    environment:
+      BACKEND_URL: http://server:8000
+      AGENT_INTERNAL_SECRET: dev-agent-secret
+      GOOGLE_API_KEY: ${GEMINI_API_KEY:-}
+    ports:
+      - "8080:8080"
+    depends_on:
+      server:
+        condition: service_healthy
+    command: ["adk", "web", "--host", "0.0.0.0", "--port", "8080"]
+
+  client:
+    build:
+      context: .
+      dockerfile: docker/client/Dockerfile
+    container_name: hirelogic_client
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+
+volumes:
+  postgres_data:

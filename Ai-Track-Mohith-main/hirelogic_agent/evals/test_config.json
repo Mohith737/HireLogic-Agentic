@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "rubric_based_tool_use_quality_v1": {
+      "threshold": 0.7,
+      "judge_model_options": {
+        "judge_model": "gemini-2.5-flash",
+        "num_samples": 1
+      },
+      "rubrics": [
+        {
+          "rubricId": "tool-sequence-quality",
+          "rubricContent": {
+            "textProperty": "The agent calls tools in a logical sequence: job context is loaded before resume analysis, resume analysis before scoring, and finalize_response is the last tool called. Each agent uses outputs from prior steps."
+          }
+        },
+        {
+          "rubricId": "tool-argument-quality",
+          "rubricContent": {
+            "textProperty": "Tool arguments are relevant to the user request. The job_id correctly identifies the requested job. Candidate IDs passed to fetch_resume_analysis and fetch_candidate_scores match those returned by fetch_candidates_for_job."
+          }
+        },
+        {
+          "rubricId": "tool-count-completeness",
+          "rubricContent": {
+            "textProperty": "For a 3-candidate ranking request, exactly 10 tool calls are made: fetch_job_context once, fetch_candidates_for_job once, fetch_resume_analysis three times, fetch_candidate_scores three times, fetch_bias_detection once, finalize_response once. No tool is skipped."
+          }
+        },
+        {
+          "rubricId": "fairness-compliance",
+          "rubricContent": {
+            "textProperty": "The response refers to candidates only by anonymous ID such as candidate-uuid-001. No real names, gender, ethnicity or institutional affiliation is mentioned."
+          }
+        }
+      ]
+    },
+    "hallucinations_v1": {
+      "threshold": 0.50
+    },
+    "final_response_match_v2": {
+      "threshold": 0.7
+    }
+  }
+}

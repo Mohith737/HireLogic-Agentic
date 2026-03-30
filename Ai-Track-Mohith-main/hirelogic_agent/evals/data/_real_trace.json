@@ -1,0 +1,91 @@
+{
+  "tool_calls": [
+    {
+      "tool_name": "fetch_job_context",
+      "tool_input": {
+        "job_id": "1"
+      }
+    },
+    {
+      "tool_name": "fetch_candidates_for_job",
+      "tool_input": {
+        "job_id": "1"
+      }
+    },
+    {
+      "tool_name": "fetch_resume_analysis",
+      "tool_input": {
+        "candidate_anon_id": "candidate-uuid-001",
+        "competency_framework_json": "[{\"name\": \"Python\", \"weight\": 0.3, \"description\": \"Python proficiency for ML systems\", \"scoring_criteria\": {\"10\": \"Expert, production systems at scale\", \"7\": \"Proficient, 3+ years, some production\", \"4\": \"Basic, scripts and notebooks only\"}}, {\"name\": \"Machine Learning\", \"weight\": 0.25, \"description\": \"ML model development and deployment\", \"scoring_criteria\": {\"10\": \"Novel model development, production impact\", \"7\": \"Standard ML pipelines, fine-tuning, deployment\", \"4\": \"Theoretical knowledge, limited application\"}}, {\"name\": \"System Design\", \"weight\": 0.2, \"description\": \"Distributed systems architecture\", \"scoring_criteria\": {\"10\": \"Designed distributed systems serving millions\", \"7\": \"Solid architecture knowledge, mid-scale\", \"4\": \"Basic understanding, no production design\"}}, {\"name\": \"Communication\", \"weight\": 0.15, \"description\": \"Cross-functional collaboration\", \"scoring_criteria\": {\"10\": \"Led cross-functional projects, clear docs\", \"7\": \"Effective collaborator, decent writing\", \"4\": \"Limited evidence beyond individual work\"}}, {\"name\": \"Research\", \"weight\": 0.1, \"description\": \"Research depth and contribution\", \"scoring_criteria\": {\"10\": \"Published papers, novel contributions\", \"7\": \"Deep reading, applied research to products\", \"4\": \"Academic exposure only\"}}}]",
+        "candidate_document_path": "documents/candidate_uuid_001/",
+        "job_id": "1"
+      }
+    },
+    {
+      "tool_name": "fetch_resume_analysis",
+      "tool_input": {
+        "job_id": "1",
+        "candidate_document_path": "documents/candidate_uuid_002/",
+        "candidate_anon_id": "candidate-uuid-002",
+        "competency_framework_json": "[{\"name\": \"Python\", \"weight\": 0.3, \"description\": \"Python proficiency for ML systems\", \"scoring_criteria\": {\"10\": \"Expert, production systems at scale\", \"7\": \"Proficient, 3+ years, some production\", \"4\": \"Basic, scripts and notebooks only\"}}, {\"name\": \"Machine Learning\", \"weight\": 0.25, \"description\": \"ML model development and deployment\", \"scoring_criteria\": {\"10\": \"Novel model development, production impact\", \"7\": \"Standard ML pipelines, fine-tuning, deployment\", \"4\": \"Theoretical knowledge, limited application\"}}, {\"name\": \"System Design\", \"weight\": 0.2, \"description\": \"Distributed systems architecture\", \"scoring_criteria\": {\"10\": \"Designed distributed systems serving millions\", \"7\": \"Solid architecture knowledge, mid-scale\", \"4\": \"Basic understanding, no production design\"}}, {\"name\": \"Communication\", \"weight\": 0.15, \"description\": \"Cross-functional collaboration\", \"scoring_criteria\": {\"10\": \"Led cross-functional projects, clear docs\", \"7\": \"Effective collaborator, decent writing\", \"4\": \"Limited evidence beyond individual work\"}}, {\"name\": \"Research\", \"weight\": 0.1, \"description\": \"Research depth and contribution\", \"scoring_criteria\": {\"10\": \"Published papers, novel contributions\", \"7\": \"Deep reading, applied research to products\", \"4\": \"Academic exposure only\"}}}]"
+      }
+    },
+    {
+      "tool_name": "fetch_resume_analysis",
+      "tool_input": {
+        "candidate_document_path": "documents/candidate_uuid_003/",
+        "candidate_anon_id": "candidate-uuid-003",
+        "competency_framework_json": "[{\"name\": \"Python\", \"weight\": 0.3, \"description\": \"Python proficiency for ML systems\", \"scoring_criteria\": {\"10\": \"Expert, production systems at scale\", \"7\": \"Proficient, 3+ years, some production\", \"4\": \"Basic, scripts and notebooks only\"}}, {\"name\": \"Machine Learning\", \"weight\": 0.25, \"description\": \"ML model development and deployment\", \"scoring_criteria\": {\"10\": \"Novel model development, production impact\", \"7\": \"Standard ML pipelines, fine-tuning, deployment\", \"4\": \"Theoretical knowledge, limited application\"}}, {\"name\": \"System Design\", \"weight\": 0.2, \"description\": \"Distributed systems architecture\", \"scoring_criteria\": {\"10\": \"Designed distributed systems serving millions\", \"7\": \"Solid architecture knowledge, mid-scale\", \"4\": \"Basic understanding, no production design\"}}, {\"name\": \"Communication\", \"weight\": 0.15, \"description\": \"Cross-functional collaboration\", \"scoring_criteria\": {\"10\": \"Led cross-functional projects, clear docs\", \"7\": \"Effective collaborator, decent writing\", \"4\": \"Limited evidence beyond individual work\"}}, {\"name\": \"Research\", \"weight\": 0.1, \"description\": \"Research depth and contribution\", \"scoring_criteria\": {\"10\": \"Published papers, novel contributions\", \"7\": \"Deep reading, applied research to products\", \"4\": \"Academic exposure only\"}}}]",
+        "job_id": "1"
+      }
+    },
+    {
+      "tool_name": "fetch_candidate_scores",
+      "tool_input": {
+        "interview_feedback_json": "null",
+        "job_id": "1",
+        "competency_framework_json": "[{\"name\": \"Python\", \"weight\": 0.3, \"description\": \"Python proficiency for ML systems\", \"scoring_criteria\": {\"10\": \"Expert, production systems at scale\", \"7\": \"Proficient, 3+ years, some production\", \"4\": \"Basic, scripts and notebooks only\"}}, {\"name\": \"Machine Learning\", \"weight\": 0.25, \"description\": \"ML model development and deployment\", \"scoring_criteria\": {\"10\": \"Novel model development, production impact\", \"7\": \"Standard ML pipelines, fine-tuning, deployment\", \"4\": \"Theoretical knowledge, limited application\"}}, {\"name\": \"System Design\", \"weight\": 0.2, \"description\": \"Distributed systems architecture\", \"scoring_criteria\": {\"10\": \"Designed distributed systems serving millions\", \"7\": \"Solid architecture knowledge, mid-scale\", \"4\": \"Basic understanding, no production design\"}}, {\"name\": \"Communication\", \"weight\": 0.15, \"description\": \"Cross-functional collaboration\", \"scoring_criteria\": {\"10\": \"Led cross-functional projects, clear docs\", \"7\": \"Effective collaborator, decent writing\", \"4\": \"Limited evidence beyond individual work\"}}, {\"name\": \"Research\", \"weight\": 0.1, \"description\": \"Research depth and contribution\", \"scoring_criteria\": {\"10\": \"Published papers, novel contributions\", \"7\": \"Deep reading, applied research to products\", \"4\": \"Academic exposure only\"}}}]",
+        "candidate_anon_id": "candidate-uuid-001",
+        "evidence_by_competency_json": "{}"
+      }
+    },
+    {
+      "tool_name": "fetch_candidate_scores",
+      "tool_input": {
+        "interview_feedback_json": "null",
+        "job_id": "1",
+        "competency_framework_json": "[{\"name\": \"Python\", \"weight\": 0.3, \"description\": \"Python proficiency for ML systems\", \"scoring_criteria\": {\"10\": \"Expert, production systems at scale\", \"7\": \"Proficient, 3+ years, some production\", \"4\": \"Basic, scripts and notebooks only\"}}, {\"name\": \"Machine Learning\", \"weight\": 0.25, \"description\": \"ML model development and deployment\", \"scoring_criteria\": {\"10\": \"Novel model development, production impact\", \"7\": \"Standard ML pipelines, fine-tuning, deployment\", \"4\": \"Theoretical knowledge, limited application\"}}, {\"name\": \"System Design\", \"weight\": 0.2, \"description\": \"Distributed systems architecture\", \"scoring_criteria\": {\"10\": \"Designed distributed systems serving millions\", \"7\": \"Solid architecture knowledge, mid-scale\", \"4\": \"Basic understanding, no production design\"}}, {\"name\": \"Communication\", \"weight\": 0.15, \"description\": \"Cross-functional collaboration\", \"scoring_criteria\": {\"10\": \"Led cross-functional projects, clear docs\", \"7\": \"Effective collaborator, decent writing\", \"4\": \"Limited evidence beyond individual work\"}}, {\"name\": \"Research\", \"weight\": 0.1, \"description\": \"Research depth and contribution\", \"scoring_criteria\": {\"10\": \"Published papers, novel contributions\", \"7\": \"Deep reading, applied research to products\", \"4\": \"Academic exposure only\"}}}]",
+        "candidate_anon_id": "candidate-uuid-002",
+        "evidence_by_competency_json": "{}"
+      }
+    },
+    {
+      "tool_name": "fetch_candidate_scores",
+      "tool_input": {
+        "job_id": "1",
+        "interview_feedback_json": "{\"overall_score\": 7.0, \"feedback\": {\"Python\": 7, \"Machine Learning\": 6, \"System Design\": 9, \"Communication\": 8, \"Research\": 5}, \"interviewer_notes\": \"Strong architecture judgment with practical tradeoff awareness.\"}",
+        "candidate_anon_id": "candidate-uuid-003",
+        "evidence_by_competency_json": "{}",
+        "competency_framework_json": "[{\"name\": \"Python\", \"weight\": 0.3, \"description\": \"Python proficiency for ML systems\", \"scoring_criteria\": {\"10\": \"Expert, production systems at scale\", \"7\": \"Proficient, 3+ years, some production\", \"4\": \"Basic, scripts and notebooks only\"}}, {\"name\": \"Machine Learning\", \"weight\": 0.25, \"description\": \"ML model development and deployment\", \"scoring_criteria\": {\"10\": \"Novel model development, production impact\", \"7\": \"Standard ML pipelines, fine-tuning, deployment\", \"4\": \"Theoretical knowledge, limited application\"}}, {\"name\": \"System Design\", \"weight\": 0.2, \"description\": \"Distributed systems architecture\", \"scoring_criteria\": {\"10\": \"Designed distributed systems serving millions\", \"7\": \"Solid architecture knowledge, mid-scale\", \"4\": \"Basic understanding, no production design\"}}, {\"name\": \"Communication\", \"weight\": 0.15, \"description\": \"Cross-functional collaboration\", \"scoring_criteria\": {\"10\": \"Led cross-functional projects, clear docs\", \"7\": \"Effective collaborator, decent writing\", \"4\": \"Limited evidence beyond individual work\"}}, {\"name\": \"Research\", \"weight\": 0.1, \"description\": \"Research depth and contribution\", \"scoring_criteria\": {\"10\": \"Published papers, novel contributions\", \"7\": \"Deep reading, applied research to products\", \"4\": \"Academic exposure only\"}}}]"
+      }
+    },
+    {
+      "tool_name": "fetch_bias_detection",
+      "tool_input": {
+        "job_id": "1",
+        "all_scorecards_json": "[{\"candidate_anon_id\": \"candidate-uuid-001\", \"overall_score\": 0.0, \"competency_scores\": {}, \"low_confidence\": true, \"interview_feedback_score\": null, \"application_status\": null}, {\"candidate_anon_id\": \"candidate-uuid-002\", \"overall_score\": 0.0, \"competency_scores\": {}, \"low_confidence\": true, \"interview_feedback_score\": null, \"application_status\": null}, {\"candidate_anon_id\": \"candidate-uuid-003\", \"overall_score\": 0.0, \"competency_scores\": {}, \"low_confidence\": true, \"interview_feedback_score\": 7.0, \"application_status\": null}]"
+      }
+    },
+    {
+      "tool_name": "finalize_response",
+      "tool_input": {
+        "job_id": "1",
+        "user_query": "Rank all candidates for the Senior ML Engineer role",
+        "bias_flags_json": "[{\"flag_type\": \"low_confidence_scoring\", \"description\": \"Candidates ['candidate-uuid-001', 'candidate-uuid-002', 'candidate-uuid-003'] have low confidence scores due to sparse resume evidence.\", \"severity\": \"MEDIUM\", \"recommendation\": \"Request additional information or conduct screening call before ranking.\"}, {\"flag_type\": \"below_historical_baseline\", \"description\": \"Top candidate score 0.0 is below historical hire average 7.8.\", \"severity\": \"LOW\", \"recommendation\": \"Consider whether job requirements have changed since historical hires.\"}]",
+        "session_id": "1",
+        "all_scorecards_json": "[{\"candidate_anon_id\": \"candidate-uuid-001\", \"overall_score\": 0.0, \"competency_scores\": {}, \"low_confidence\": true, \"interview_feedback_score\": null, \"application_status\": null}, {\"candidate_anon_id\": \"candidate-uuid-002\", \"overall_score\": 0.0, \"competency_scores\": {}, \"low_confidence\": true, \"interview_feedback_score\": null, \"application_status\": null}, {\"candidate_anon_id\": \"candidate-uuid-003\", \"overall_score\": 0.0, \"competency_scores\": {}, \"low_confidence\": true, \"interview_feedback_score\": 7.0, \"application_status\": null}]"
+      }
+    }
+  ],
+  "final_text_sample": "{\"finalize_response_response\": {\"result\": \"{\\\"scorecard\\\": {\\\"candidate-uuid-001\\\": {\\\"competency_scores\\\": {}, \\\"overall_score\\\": 0.0, \\\"rank\\\": 1, \\\"interview_feedback_score\\\": null, \\\"application_s"
+}
